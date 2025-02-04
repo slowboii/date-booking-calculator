@@ -31,14 +31,14 @@ const RoomBooking = () => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="w-full max-w-md mx-auto p-6"
+      className="w-full max-w-4xl mx-auto px-4 pb-8"
     >
-      <div className="glass-morphism p-6 rounded-2xl">
+      <div className="glass-morphism p-8 rounded-2xl">
         <Calendar
           mode="single"
           selected={selectedDate}
           onSelect={handleDateSelect}
-          className="rounded-md"
+          className="mx-auto"
         />
       </div>
 
