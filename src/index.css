@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,8 +25,6 @@
     --input: 240 5.9% 90%;
     --ring: 142 76% 36%;
     --radius: 0.75rem;
-    --calculator-button: 0 0% 100%;
-    --calculator-display: 0 0% 98%;
   }
 }
 
@@ -42,29 +41,34 @@
   @apply bg-white/30 backdrop-blur-md border border-white/20;
 }
 
-.calculator-button {
-  @apply glass-morphism hover:bg-white/40 active:bg-white/50 transition-all duration-200 rounded-2xl 
-         flex items-center justify-center text-2xl font-medium cursor-pointer select-none
-         active:animate-button-press;
+.fc-header-toolbar {
+  @apply mb-8 !important;
 }
 
-.calculator-display {
-  @apply glass-morphism p-6 rounded-2xl mb-4 text-right text-4xl font-light;
+.fc-toolbar-title {
+  @apply text-3xl font-light !important;
 }
 
-.date-cell {
-  @apply p-2 text-center cursor-pointer hover:bg-accent transition-colors duration-200
-         rounded-lg relative flex items-center justify-center;
+.fc-button {
+  @apply bg-primary text-white px-4 py-2 rounded hover:bg-primary/80 transition-colors !important;
 }
 
-.date-cell.selected {
-  @apply bg-primary text-primary-foreground;
+.fc-day {
+  @apply hover:bg-accent/20 transition-colors cursor-pointer !important;
 }
 
-.date-cell.available {
-  @apply hover:bg-primary/10;
+.fc-day-today {
+  @apply bg-accent !important;
 }
 
-.date-cell.unavailable {
-  @apply opacity-50 cursor-not-allowed;
+.fc-daygrid-day-number {
+  @apply text-lg !important;
+}
+
+#calendar {
+  @apply w-full max-w-none mx-auto;
+}
+
+.fc {
+  @apply h-full;
 }
